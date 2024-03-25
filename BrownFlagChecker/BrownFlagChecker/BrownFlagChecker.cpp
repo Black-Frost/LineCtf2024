@@ -106,8 +106,6 @@ bool handleDebugEvent(DEBUG_EVENT debugEvent) {
             if (!status || regStatus != SHADOWMEM_STAT_SUCCESS) return false;
 
             // This will contain the input later on
-            // Every data array is of uniform length to trick the player
-            // https://stackoverflow.com/questions/32068996/how-all-the-elements-of-array-initialize-to-zero-and-first-element-to-1-in-c
             const char data0[KEY_LEN] = { 188, 212, 252, 120, 165, 17, 251, 138, 212, 35, 208, 189, 53, 5, 33, 220 }; 
             const char data1[KEY_LEN] = { 158, 214, 103, 179, 141, 19, 141, 231, 73, 115, 82, 248, 180, 86, 248, 88 };   
             const char data2[KEY_LEN] = { 251, 167, 60, 163, 232, 141, 60, 116, 218, 203, 50, 132, 133, 236, 42, 237 };
