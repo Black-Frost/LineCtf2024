@@ -136,7 +136,6 @@ bool handleDebugEvent(DEBUG_EVENT debugEvent) {
             for (int i = 0; i < BUFFER_COUNT; i++) {
                 // The pages are not actually created in physical memory
                 // We have to write something to it so it could be created
-                // Read more about this in the `Windows Internal` book, page 415, the section about virtual address descriptors
                 shadowBufferPtr[i] = VirtualAlloc(NULL, 2048, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
                 if (shadowBufferPtr[i] == NULL) {
                     //puts("[!] Can't allocate buffer");
